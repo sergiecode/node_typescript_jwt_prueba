@@ -2,9 +2,9 @@
 
 npm init -y
 
-npm install express jsonwebtoken bcrypt @prisma/client dotenv
+npm install express jsonwebtoken bcrypt @prisma/client dotenv typescript
 
-npm install --save-dev typescript ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt @types/node rimraf prisma
+npm install --save-dev ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt @types/node rimraf prisma
 
 npx tsc --init
 
