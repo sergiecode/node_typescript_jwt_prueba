@@ -6,7 +6,7 @@ npm install express jsonwebtoken bcrypt @prisma/client dotenv typescript
 
 npm install --save-dev ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt @types/node rimraf prisma
 
-npx tsc --init
+npx tsc --init --outDir dist/ --rootDir src
 
 npx prisma init
 
@@ -36,3 +36,17 @@ http://localhost:3000/users
 http://localhost:3000/users/:id
 
 
+## SCRIPTS
+
+```
+  "dev": "tsnd --respawn --clear src/app.ts",
+  "build": "rimraf ./dist && tsc",
+  "start": "npm run build && node dist/app.js"
+```
+
+## TSCONFIG
+
+```
+"exclude": ["node_modules","dist" ],
+"include": ["src"],
+```
